@@ -2,7 +2,7 @@
 
 ==================================
 
-PRIMEIRO INSTALE O PYTHON 3.6 OU ACIMA 
+PRIMEIRO INSTALE O PYTHON 3.6
 PARA O PROGRAMA FUNCIONAR
 
 ==================================
