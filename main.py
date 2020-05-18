@@ -16,7 +16,7 @@ if system() == "Linux":
 			break
 
 else:
-	en = pyttsx3.init()
+	en = pyttsx3.init('sapi5')
 
 city = ""
 User_Global = ""
