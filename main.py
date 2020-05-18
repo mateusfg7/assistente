@@ -134,13 +134,13 @@ def assistente():
         resposta_erro_aleatoria = choice(lista_erros)
         rec = sr.Recognizer()
 
-        with sr.Microphone() as s:
-            rec.adjust_for_ambient_noise(s)
+        with sr.Microphone() as source:
+            rec.adjust_for_ambient_noise(source)
 
         while True:
             try:
-                audio = rec.listen(s)
-                entrada = rec.recognize_google(audio, Language="pt-br")
+                audio = rec.listen(source, timeout=1, phrase_time_limit=10)
+                entrada = rec.recognize_google(audio, Language="pt")
                 entrada = entrada.lower()
                 print("User: {}".format(entrada.capitalize()))
 
