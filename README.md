@@ -32,4 +32,4 @@ Obs: Você pode usar os mesmos comandos do windows,
 
 Depois de instalar todas as bibliotecas, 
 coloque todos os arquivos em uma pasta e abra o terminal nessa pasta, 
-no terminal digite: python3 main.py
+no terminal digite: _python3 main.py_
