@@ -15,7 +15,6 @@ _Windows_
 - pip3 install pyttsx3
 - pip3 install pyaudio
 - pip3 install youtube-search
-- pip3 install webbrowser
 
 Obs: Instale todas essas bibliotecas 
 para o programa funcionar direito
@@ -25,7 +24,6 @@ _Linux_
 - sudo apt-get install python3-pyttsx3
 - sudo apt-get install python3-pyaudio
 - sudo apt-get install python3-youtube-search
-- sudo apt-get install python3-webbrowser
 
 Obs: Você pode usar os mesmos comandos do windows, 
 é só colocar sudo antes do comando
