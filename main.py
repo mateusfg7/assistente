@@ -140,7 +140,7 @@ def assistente():
         while True:
             try:
                 audio = rec.listen(s)
-                entrada = rec.recognize_google(audio, lang="pt")
+                entrada = rec.recognize_google(audio, Language="pt-br")
                 entrada = entrada.lower()
                 print("User: {}".format(entrada.capitalize()))
 
