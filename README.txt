@@ -11,7 +11,6 @@ COMANDOS PARA DAR NO CMD/TERMINAL
 ANTES DE USAR O PROGRAMA
 
 _Windows_
-- pip3 install pywin32
 - pip3 install speechrecognition
 - pip3 install pyttsx3
 - pip3 install pyaudio
