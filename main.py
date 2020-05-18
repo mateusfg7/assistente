@@ -4,14 +4,19 @@ from config import *
 from tkinter import Tk, Label, Entry, Button, messagebox
 from random import choice
 import DataBase
+from platform import system
 
-en = pyttsx3.init()
-voices = en.getProperty('voices')
-en.setProperty('rate', 175)
-for voice in voices:
-    if voice.languages[0] == b'\x05pt-br':
-        en.setProperty('voice', voice.id)
-        break
+if system() == "Linux":
+	en = pyttsx3.init()
+	voices = en.getProperty('voices')
+	en.setProperty('rate', 175)
+	for voice in voices:
+    	if voice.languages[0] == b'\x05pt-br':
+        	en.setProperty('voice', voice.id)
+        	break
+
+else:
+	en = pyttsx3.init('sapi5')
 
 city = ""
 User_Global = ""
