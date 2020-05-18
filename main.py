@@ -11,9 +11,9 @@ if system() == "Linux":
 	voices = en.getProperty('voices')
 	en.setProperty('rate', 175)
 	for voice in voices:
-    	if voice.languages[0] == b'\x05pt-br':
-        	en.setProperty('voice', voice.id)
-        	break
+		if voice.languages[0] == b'\x05pt-br':
+			en.setProperty('voice', voice.id)
+			break
 
 else:
 	en = pyttsx3.init('sapi5')
