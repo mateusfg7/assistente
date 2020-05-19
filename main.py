@@ -136,10 +136,10 @@ def assistente():
 
         with sr.Microphone() as source:
             rec.adjust_for_ambient_noise(source)
+            audio = rec.listen(source, timeout=1, phrase_time_limit=10)
 
         while True:
             try:
-                audio = rec.listen(source, timeout=1, phrase_time_limit=10)
                 entrada = rec.recognize_google(audio, language="pt")
                 entrada = entrada.lower()
                 print("User: {}".format(entrada.capitalize()))
