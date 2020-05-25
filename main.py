@@ -11,9 +11,9 @@ if system() == "Linux":
 	voices = en.getProperty('voices')
 	en.setProperty('rate', 175)
 	for voice in voices:
-    	if voice.languages[0] == b'\x05pt-br':
-        	en.setProperty('voice', voice.id)
-        	break
+		if voice.languages[0] == b'\x05pt-br':
+			en.setProperty('voice', voice.id)
+			break
 
 else:
 	en = pyttsx3.init('sapi5')
@@ -132,15 +132,15 @@ def assistente():
 
     while True:
         resposta_erro_aleatoria = choice(lista_erros)
-        # rec = sr.Recognizer()
+        rec = sr.Recognizer()
 
-        # with sr.Microphone() as s:
-        # rec.adjust_for_ambient_noise(s)
+        with sr.Microphone() as source:
+            rec.adjust_for_ambient_noise(source)
+            audio = rec.listen(source, timeout=1, phrase_time_limit=10)
 
         while True:
             try:
-                # audio = rec.listen(s)
-                entrada = input("Digite: ")
+                entrada = rec.recognize_google(audio, language="pt")
                 entrada = entrada.lower()
                 print("User: {}".format(entrada.capitalize()))
 
